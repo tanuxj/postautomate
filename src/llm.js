@@ -3,11 +3,11 @@ const { BASE_PERSONA } = require('./topics');
 const BASE_URL = process.env.LLM_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions';
 const MODEL = process.env.LLM_MODEL || 'gemini-3.1-flash-lite';
 
-async function generatePost(topic, recentSubjects) {
-  const avoidText = recentSubjects.length
-    ? `Already covered recently under "${topic.label}" — do not repeat any of these:\n${recentSubjects
-        .map((s) => `- ${s}`)
-        .join('\n')}`
+async function generatePost(topic, recentEntries) {
+  const avoidText = recentEntries.length
+    ? `Your last ${recentEntries.length} posts under "${topic.label}" (most recent last):\n${recentEntries
+        .map((e) => `- subject: "${e.subject}" — full post: "${e.post}"`)
+        .join('\n')}\n\nDo not repeat any of these subjects. Also look at their structure (opening words, format like "me: / also me:", one-liner vs two-line, question vs statement, where the punchline/attribution lands) and deliberately use a DIFFERENT structure this time — don't let any single format become your default.`
     : `Nothing posted yet under "${topic.label}".`;
 
   const systemPrompt = `${BASE_PERSONA}\n\n${topic.instructions}`;

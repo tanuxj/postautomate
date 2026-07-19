@@ -28,8 +28,8 @@ async function main() {
   const topic = pickTopic(lastTopicKey);
   const recentForTopic = history
     .filter((entry) => entry.topic === topic.key)
-    .slice(-15)
-    .map((entry) => entry.subject);
+    .slice(-8)
+    .map((entry) => ({ subject: entry.subject, post: entry.post }));
 
   console.log(`Topic: ${topic.label}`);
   console.log('Generating post...');

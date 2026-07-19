@@ -1,21 +1,23 @@
-# Quote/Cinema/Tech Opinion Bot
+# Cinema/Tech/Life Opinion Bot
 
 Posts to X (Twitter) 4 times a day, at times that shift day to day, written by
-an LLM to sound like an average person casually tweeting — not a content
-account. Works with any OpenAI-compatible chat completions API (defaults to
-Google Gemini's free tier; xAI's Grok also works with a config change — see
-[src/llm.js](src/llm.js)). Rotates across four topics (see
-[src/topics.js](src/topics.js)):
+an LLM to sound like an average person casually tweeting today — not a content
+account, not a meme account running dated templates. Works with any
+OpenAI-compatible chat completions API (defaults to Google Gemini's free tier;
+xAI's Grok also works with a config change — see [src/llm.js](src/llm.js)).
+Rotates across four topics (see [src/topics.js](src/topics.js)):
 
-- **Historical quotes** — real, well-attested quotes from historical figures.
+- **Everyday relatable thoughts** — sincere, current, "wait, same" observations
+  about small daily-life moments. Not joke-shaped.
 - **Underrated Indian regional cinema** — opinions/recommendations on
   underseen Telugu, Malayalam, Tamil (occasionally Kannada/Bengali/Marathi)
   films.
 - **Tech opinions** — casual subjective takes on tools, gadgets, dev
-  practices, AI, etc.
-- **Sarcastic humor / meme-style takes** — text-only, dry/sarcastic tweets
-  about relatable everyday life stuff. No real people, companies, politics,
-  or religion as targets — just universal annoyances.
+  practices, AI, etc., tied to today's tech conversation where it fits.
+- **Sarcastic humor** — text-only, dry/sarcastic tweets about relatable
+  everyday life stuff, written in plain sentence form rather than recycled
+  meme templates. No real people, companies, politics, or religion as
+  targets — just universal annoyances.
 
 Runs as a scheduled script — no browser needs to be open.
 
