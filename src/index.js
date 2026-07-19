@@ -37,18 +37,18 @@ async function main() {
   console.log(`Subject: ${subject}`);
   console.log(`Post (${post.length} chars): ${post}`);
 
+  recordPost(
+    { topic: topic.key, subject, post, date: new Date().toISOString() },
+    history
+  );
+
   if (DRY_RUN) {
-    console.log('\n[DRY RUN] Skipping publish to X.');
+    console.log('\n[DRY RUN] Skipping publish to X (still recorded in history for topic/subject variety tracking).');
     return;
   }
 
   const tweet = await postTweet(post);
   console.log(`Posted: https://x.com/i/web/status/${tweet.id}`);
-
-  recordPost(
-    { topic: topic.key, subject, post, date: new Date().toISOString() },
-    history
-  );
 }
 
 main().catch((err) => {
