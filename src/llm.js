@@ -10,7 +10,14 @@ async function generatePost(topic, recentEntries) {
         .join('\n')}\n\nDo not repeat any of these subjects. Also look at their structure (opening words, format like "me: / also me:", one-liner vs two-line, question vs statement, where the punchline/attribution lands) and deliberately use a DIFFERENT structure this time — don't let any single format become your default.`
     : `Nothing posted yet under "${topic.label}".`;
 
-  const systemPrompt = `${BASE_PERSONA}\n\n${topic.instructions}`;
+  const today = new Date().toLocaleDateString('en-IN', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'Asia/Kolkata',
+  });
+  const systemPrompt = `${BASE_PERSONA.replace('{{TODAY}}', today)}\n\n${topic.instructions}`;
 
   const body = {
     model: MODEL,
