@@ -1,8 +1,11 @@
 # Quote/Cinema/Tech Opinion Bot
 
 Posts to X (Twitter) 4 times a day, at times that shift day to day, written by
-Grok (xAI) to sound like an average person casually tweeting — not a content
-account. Rotates across four topics (see [src/topics.js](src/topics.js)):
+an LLM to sound like an average person casually tweeting — not a content
+account. Works with any OpenAI-compatible chat completions API (defaults to
+Google Gemini's free tier; xAI's Grok also works with a config change — see
+[src/llm.js](src/llm.js)). Rotates across four topics (see
+[src/topics.js](src/topics.js)):
 
 - **Historical quotes** — real, well-attested quotes from historical figures.
 - **Underrated Indian regional cinema** — opinions/recommendations on
@@ -18,10 +21,17 @@ Runs as a scheduled script — no browser needs to be open.
 
 ## 1. Get your API keys
 
-**xAI (Grok):**
+**LLM — Google Gemini (free), default:**
+1. Go to https://aistudio.google.com/apikey, sign in, generate an API key.
+2. Free tier rate limits vary by model, but easily cover 4 requests/day.
+3. Uses Gemini's OpenAI-compatible endpoint, so no extra SDK is needed —
+   same `fetch` call as any other provider.
+
+**LLM — xAI Grok (paid alternative):**
 1. Go to https://console.x.ai, create an account, generate an API key.
-2. Note: this is pay-as-you-go, not permanently free. One short generation a
-   day costs fractions of a cent — expect well under $1/month.
+2. Pay-as-you-go, not free — expect well under $1/month at this volume.
+3. Set `LLM_BASE_URL=https://api.x.ai/v1/chat/completions` and
+   `LLM_MODEL=grok-4` in `.env`.
 
 **X (Twitter) API:**
 1. Go to https://developer.x.com/en/portal/dashboard, create a Project + App

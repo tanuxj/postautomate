@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { generatePost } = require('./grok');
+const { generatePost } = require('./llm');
 const { postTweet } = require('./twitter');
 const { loadHistory, recordPost } = require('./history');
 const { pickTopic } = require('./topics');
@@ -7,7 +7,7 @@ const { pickTopic } = require('./topics');
 const DRY_RUN = process.argv.includes('--dry-run');
 
 async function main() {
-  const requiredVars = ['XAI_API_KEY'];
+  const requiredVars = ['LLM_API_KEY'];
   if (!DRY_RUN) {
     requiredVars.push(
       'TWITTER_API_KEY',
@@ -32,7 +32,7 @@ async function main() {
     .map((entry) => entry.subject);
 
   console.log(`Topic: ${topic.label}`);
-  console.log('Generating post via Grok...');
+  console.log('Generating post...');
   const { subject, post } = await generatePost(topic, recentForTopic);
   console.log(`Subject: ${subject}`);
   console.log(`Post (${post.length} chars): ${post}`);
