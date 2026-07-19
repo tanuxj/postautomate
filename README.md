@@ -5,7 +5,8 @@ an LLM to sound like an average person casually tweeting today — not a content
 account, not a meme account running dated templates. Works with any
 OpenAI-compatible chat completions API (defaults to Google Gemini's free tier;
 xAI's Grok also works with a config change — see [src/llm.js](src/llm.js)).
-Rotates across four topics (see [src/topics.js](src/topics.js)):
+Rotates across five topics (see [src/topics.js](src/topics.js)), all voiced as a
+guy born in 2003 who did BTech CSE in India and now works as a developer:
 
 - **Everyday relatable thoughts** — sincere, current, "wait, same" observations
   about small daily-life moments. Not joke-shaped.
@@ -14,6 +15,9 @@ Rotates across four topics (see [src/topics.js](src/topics.js)):
   films.
 - **Tech opinions** — casual subjective takes on tools, gadgets, dev
   practices, AI, etc., tied to today's tech conversation where it fits.
+- **Engineering college & developer work life** — BTech CSE college memories
+  (hostel, backlogs, placements) and current dev-job life (standups, bugs,
+  WFH, appraisals).
 - **Sarcastic humor** — text-only, dry/sarcastic tweets about relatable
   everyday life stuff, written in plain sentence form rather than recycled
   meme templates. No real people, companies, politics, or religion as
