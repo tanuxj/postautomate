@@ -5,7 +5,7 @@ an LLM to sound like an average person casually tweeting today — not a content
 account, not a meme account running dated templates. Works with any
 OpenAI-compatible chat completions API (defaults to Google Gemini's free tier;
 xAI's Grok also works with a config change — see [src/llm.js](src/llm.js)).
-Rotates across nine topics, weighted so the universal/relatable ones show up most
+Rotates across ten topics, weighted so the universal/relatable ones show up most
 often (see the `weight` values in [src/topics.js](src/topics.js)), all voiced as
 a guy born in 2003, based in Hyderabad, who did BTech CSE in India and now works
 as a developer. The current date is also fed into the prompt so weather/seasonal/
@@ -26,6 +26,9 @@ festival mentions stay plausible instead of guessed:
   vacations, first phone, school days — warm, not sarcastic.
 - **Hometown vs city life & money** (weight 2) — missing home, rent/salary/
   UPI spending, hometown-vs-Hyderabad pace.
+- **Stoic wisdom, relatable framing** (weight 2) — real stoic ideas (Marcus
+  Aurelius, Seneca, Epictetus) delivered as a personal thought, rarely naming
+  the philosopher — not a history-lesson quote block.
 - **Underrated Indian regional cinema** (weight 1) — opinions/recommendations
   on underseen Telugu, Malayalam, Tamil (occasionally Kannada/Bengali/Marathi)
   films — deliberately low weight, roughly 1-2 posts/week.

@@ -127,6 +127,24 @@ moment, comparing prices or life back home vs the city. Keep it grounded and spe
 not a generic "adulting is hard" cliché.`,
   },
   {
+    key: 'stoic-mindset',
+    label: 'Stoic wisdom, relatable framing',
+    weight: 2,
+    instructions: `Today's post: a real stoic philosophy idea (from Marcus Aurelius, Seneca,
+Epictetus, or general stoic principles — control what you can control, memento mori, amor
+fati, not suffering twice over something already out of your hands, discipline over
+motivation, staying calm under things you can't change, etc.) but delivered as YOUR OWN
+current personal realization, not a history lesson. Do NOT open with "Marcus Aurelius
+said..." or drop a name-and-date quote block — that's the exact stale format to avoid.
+Instead translate the idea into something that sounds like a real thought someone had
+today (e.g. "wasted so much energy today on stuff that isn't even in my control" instead
+of quoting a historical figure directly). Very rarely (not the default), it's fine to add
+a light aside naming the philosopher ("basically what Seneca was on about 2000 years ago
+and it still checks out") — but most posts shouldn't name anyone at all. Keep the actual
+idea grounded in real stoic philosophy, never invented, but the delivery should feel like
+a personal mindset thought, not an educational quote post.`,
+  },
+  {
     key: 'indian-cinema',
     label: 'Underrated Indian regional cinema',
     weight: 1,
