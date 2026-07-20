@@ -5,9 +5,11 @@ an LLM to sound like an average person casually tweeting today — not a content
 account, not a meme account running dated templates. Works with any
 OpenAI-compatible chat completions API (defaults to Google Gemini's free tier;
 xAI's Grok also works with a config change — see [src/llm.js](src/llm.js)).
-Rotates across six topics, weighted so the universal/relatable ones show up most
+Rotates across nine topics, weighted so the universal/relatable ones show up most
 often (see the `weight` values in [src/topics.js](src/topics.js)), all voiced as
-a guy born in 2003 who did BTech CSE in India and now works as a developer:
+a guy born in 2003, based in Hyderabad, who did BTech CSE in India and now works
+as a developer. The current date is also fed into the prompt so weather/seasonal/
+festival mentions stay plausible instead of guessed:
 
 - **Everyday relatable thoughts** (weight 4) — sincere, current, "wait, same"
   observations about small daily-life moments. Not joke-shaped.
@@ -18,9 +20,15 @@ a guy born in 2003 who did BTech CSE in India and now works as a developer:
 - **Indian music & web series** (weight 3) — relatable posts about songs,
   artists, moods, and Indian/OTT web series — reactions, binge moments,
   finales, not reviews.
-- **Underrated Indian regional cinema** (weight 2) — opinions/recommendations
+- **Food** (weight 2) — street food, chai/coffee habits, hostel vs home food,
+  cravings, cooking wins/fails.
+- **2010s Indian childhood nostalgia** (weight 2) — cartoons, summer
+  vacations, first phone, school days — warm, not sarcastic.
+- **Hometown vs city life & money** (weight 2) — missing home, rent/salary/
+  UPI spending, hometown-vs-Hyderabad pace.
+- **Underrated Indian regional cinema** (weight 1) — opinions/recommendations
   on underseen Telugu, Malayalam, Tamil (occasionally Kannada/Bengali/Marathi)
-  films.
+  films — deliberately low weight, roughly 1-2 posts/week.
 - **Engineering college & developer work life** (weight 1) — BTech CSE
   college memories (hostel, backlogs, placements) and current dev-job life
   (standups, WFH, AI-assisted coding, appraisals).

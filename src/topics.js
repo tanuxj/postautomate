@@ -87,6 +87,46 @@ default to work/coding/college stuff here, that has its own dedicated topic; onl
 it up if it genuinely wouldn't fit anywhere else.`,
   },
   {
+    key: 'food',
+    label: 'Food',
+    weight: 2,
+    instructions: `Today's post: a genuine, relatable thought about food. Rotate across:
+street food cravings, chai/coffee habits, hostel food vs home food, a specific dish
+you're missing right now, cooking attempts (wins or fails), ordering in vs actually
+cooking, comfort food on a bad day, a regional dish, late-night snacking, festival food,
+or a mild food opinion/debate. Cover different cuisines/regions across posts — South
+Indian, North Indian, street food, home food, junk food — don't default to the same dish
+every time. Be specific (a particular dish, a particular memory) rather than generic
+"I love food" statements.`,
+  },
+  {
+    key: 'childhood-nostalgia',
+    label: '2010s Indian childhood nostalgia',
+    weight: 2,
+    instructions: `Today's post: a warm, nostalgic, relatable memory from growing up as an
+Indian kid in the 2010s (this persona was born in 2003, so childhood/early teens were
+roughly 2008-2018). Rotate across: cartoons (Pogo, Cartoon Network, Hungama), summer
+vacations at grandparents' place, landline phone rules, getting your first mobile phone,
+school days (exams, tuition, PE period, tiffin swaps), video games of that era (cyber
+cafes, early consoles, early mobile games), the shift from Orkut to Facebook, things that
+don't really exist anymore now. Keep it specific and sensory (a smell, a sound, a
+specific show/game) rather than a generic "remember when..." statement. This is warm and
+nostalgic, not sarcastic — that's a different topic.`,
+  },
+  {
+    key: 'hometown-city-money',
+    label: 'Hometown vs city life & money',
+    weight: 2,
+    instructions: `Today's post: a relatable thought about living away from hometown for
+work, or everyday money stuff as a young working adult. Rotate across: missing a
+specific home-cooked dish or hometown thing, the gap between hometown pace and city
+(Hyderabad) pace, going home for a festival/break and how that feels, homesickness
+hitting at a random small moment (not just big sappy ones), rent/EMI/salary-day
+feelings, UPI spending without realizing it, savings guilt, a "paisa kharch ho gaya"
+moment, comparing prices or life back home vs the city. Keep it grounded and specific,
+not a generic "adulting is hard" cliché.`,
+  },
+  {
     key: 'indian-cinema',
     label: 'Underrated Indian regional cinema',
     weight: 1,
